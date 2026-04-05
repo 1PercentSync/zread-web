@@ -244,23 +244,19 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
         var content = document.createElement("div");
         content.className = "mermaid-lightbox-content";
 
-        // Clone SVG and ensure it uses viewBox for crisp vector scaling
+        // Clone SVG and ensure viewBox for crisp vector scaling
         var cloned = svg.cloneNode(true);
-        var origW = parseFloat(cloned.getAttribute("width")) || svg.getBoundingClientRect().width;
-        var origH = parseFloat(cloned.getAttribute("height")) || svg.getBoundingClientRect().height;
+        var origW = parseFloat(svg.getAttribute("width")) || svg.getBoundingClientRect().width;
+        var origH = parseFloat(svg.getAttribute("height")) || svg.getBoundingClientRect().height;
         if (!cloned.getAttribute("viewBox")) {
           cloned.setAttribute("viewBox", "0 0 " + origW + " " + origH);
         }
-        cloned.removeAttribute("width");
-        cloned.removeAttribute("height");
-        cloned.removeAttribute("style");
-        // Render at a large base size for clarity
-        var fitScale = Math.min((window.innerWidth * 0.9) / origW, (window.innerHeight * 0.85) / origH, 1.5);
+        // Scale to fit viewport while keeping vector crispness
+        var fitScale = Math.min((window.innerWidth * 0.9) / origW, (window.innerHeight * 0.85) / origH, 2);
         var renderW = origW * fitScale;
         var renderH = origH * fitScale;
-        cloned.style.width = renderW + "px";
-        cloned.style.height = renderH + "px";
-        cloned.style.display = "block";
+        cloned.setAttribute("width", renderW);
+        cloned.setAttribute("height", renderH);
         content.appendChild(cloned);
 
         var closeBtn = document.createElement("button");
