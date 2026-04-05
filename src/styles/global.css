@@ -8,7 +8,6 @@
   --bg-surface: #ffffff;
   --bg-sidebar: #f4f2ed;
   --bg-code: #f8f6f1;
-  --bg-code-header: #edeae3;
   --text-primary: #1d1b16;
   --text-secondary: #71706b;
   --text-muted: #a09f9a;
@@ -17,7 +16,6 @@
   --accent-hover: #a84608;
   --border: #e6e4de;
   --border-light: #f0ede7;
-  --shadow-sm: 0 1px 3px rgba(29, 27, 22, 0.06);
   --shadow-md: 0 4px 12px rgba(29, 27, 22, 0.08);
   --shadow-lg: 0 8px 24px rgba(29, 27, 22, 0.1);
   --radius: 6px;
@@ -25,9 +23,6 @@
   --sidebar-width: 280px;
   --toc-width: 220px;
   --content-max: 780px;
-  --level-beginner: #2d8a4e;
-  --level-intermediate: #b8621b;
-  --level-advanced: #c4550a;
 
   color-scheme: light;
 }
@@ -37,7 +32,6 @@
   --bg-surface: #1b1a17;
   --bg-sidebar: #171614;
   --bg-code: #1e1d1a;
-  --bg-code-header: #26241f;
   --text-primary: #e6e4de;
   --text-secondary: #8c8a84;
   --text-muted: #5e5c57;
@@ -46,12 +40,8 @@
   --accent-hover: #f09050;
   --border: #2c2a25;
   --border-light: #232220;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --level-beginner: #3aa55d;
-  --level-intermediate: #d4943c;
-  --level-advanced: #e8783a;
 
   color-scheme: dark;
 }
@@ -178,7 +168,7 @@ h4 {
 }
 
 .header-logo {
-  font-family: "Crimson Pro", "Noto Serif SC", serif;
+  font-family: "Crimson Pro", "Noto Serif SC", "Songti SC", "SimSun", serif;
   font-weight: 600;
   font-size: 1.35rem;
   color: var(--text-primary);
@@ -411,7 +401,7 @@ h4 {
 }
 
 .home-title {
-  font-family: "Crimson Pro", "Noto Serif SC", serif;
+  font-family: "Crimson Pro", "Noto Serif SC", "Songti SC", "SimSun", serif;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -489,7 +479,7 @@ h4 {
 }
 
 .repo-card-name {
-  font-family: "Crimson Pro", "Noto Serif SC", serif;
+  font-family: "Crimson Pro", "Noto Serif SC", "Songti SC", "SimSun", serif;
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-primary);

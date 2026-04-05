@@ -79,6 +79,22 @@ export function buildNavigation(pages: WikiPage[]): NavSection[] {
   return sections;
 }
 
+export function slugify(text: string): string {
+  return text
+    .replace(/<[^>]*>/g, "")
+    .toLowerCase()
+    .replace(/[^\w\u4e00-\u9fff\s-]/g, "")
+    .replace(/\s+/g, "-");
+}
+
+export function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 export function extractHeadings(markdown: string): { depth: number; text: string; id: string }[] {
   const headings: { depth: number; text: string; id: string }[] = [];
   const lines = markdown.split("\n");
@@ -94,10 +110,7 @@ export function extractHeadings(markdown: string): { depth: number; text: string
     const match = line.match(/^(#{2,3})\s+(.+)$/);
     if (match) {
       const text = match[2].trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^\w\u4e00-\u9fff\s-]/g, "")
-        .replace(/\s+/g, "-");
+      const id = slugify(text);
       headings.push({ depth: match[1].length, text, id });
     }
   }

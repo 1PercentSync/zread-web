@@ -146,7 +146,7 @@ async function main() {
       github: { type: "string" },
       help: { type: "boolean", short: "h" },
     },
-    strict: false,
+    strict: true,
   });
 
   if (values.help) {

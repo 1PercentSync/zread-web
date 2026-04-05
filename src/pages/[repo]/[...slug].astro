@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ThemeToggle from "../../components/ThemeToggle.astro";
 import Sidebar from "../../components/Sidebar.astro";
 import Toc from "../../components/Toc.astro";
-import { getRepos, getWiki, getPageContent, buildNavigation, extractHeadings } from "../../lib/content";
+import { getRepos, getWiki, getPageContent, buildNavigation, extractHeadings, slugify, escapeHtml } from "../../lib/content";
 import { Marked } from "marked";
 import markedKatex from "marked-katex-extension";
 
@@ -48,10 +48,7 @@ const sections = buildNavigation(wiki.pages);
 const rawMarkdown = getPageContent(repoMeta.slug, currentPage.file);
 
 // Build TOC: page title as first entry, then H2/H3 from markdown
-const titleId = currentPage.title
-  .toLowerCase()
-  .replace(/[^\w\u4e00-\u9fff\s-]/g, "")
-  .replace(/\s+/g, "-");
+const titleId = slugify(currentPage.title);
 const headings = [
   { depth: 1, text: currentPage.title, id: titleId },
   ...extractHeadings(rawMarkdown),
@@ -63,18 +60,13 @@ marked.use(markedKatex({ throwOnError: false }));
 marked.use({
   renderer: {
     heading({ text, depth }: { text: string; depth: number }) {
-      const id = text
-        .replace(/<[^>]*>/g, "")
-        .toLowerCase()
-        .replace(/[^\w\u4e00-\u9fff\s-]/g, "")
-        .replace(/\s+/g, "-");
-      return `<h${depth} id="${id}">${text}</h${depth}>`;
+      return `<h${depth} id="${slugify(text)}">${text}</h${depth}>`;
     },
     code({ text, lang }: { text: string; lang?: string }) {
       if (lang === "mermaid") {
         return `<div class="mermaid">${text}</div>`;
       }
-      return `<pre><code class="language-${lang || ""}">${text}</code></pre>`;
+      return `<pre><code class="language-${escapeHtml(lang || "")}">${escapeHtml(text)}</code></pre>`;
     },
   },
 });
@@ -246,7 +238,7 @@ const githubIcon = `<svg viewBox="0 0 24 24" fill="currentColor" width="16" heig
   <script is:inline>
     if (document.querySelector(".mermaid")) {
       var s = document.createElement("script");
-      s.src = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js";
+      s.src = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
       s.onload = function () {
         var theme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "default";
         mermaid.initialize({ startOnLoad: true, theme: theme });
