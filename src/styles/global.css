@@ -744,8 +744,9 @@ h4 {
   transform: translateX(-50%);
   z-index: 1001;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
-  background: rgba(0, 0, 0, 0.5);
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   padding: 0.3rem 0.75rem;
   border-radius: 100px;
   pointer-events: none;
