@@ -228,4 +228,103 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
       document.head.appendChild(s);
     }
   </script>
+
+  <script is:inline>
+    (function () {
+      document.addEventListener("click", function (e) {
+        var mermaidEl = e.target.closest(".markdown-body .mermaid");
+        if (!mermaidEl) return;
+
+        var svg = mermaidEl.querySelector("svg");
+        if (!svg) return;
+
+        var overlay = document.createElement("div");
+        overlay.className = "mermaid-lightbox";
+
+        var content = document.createElement("div");
+        content.className = "mermaid-lightbox-content";
+        content.innerHTML = svg.outerHTML;
+
+        var closeBtn = document.createElement("button");
+        closeBtn.className = "mermaid-lightbox-close";
+        closeBtn.setAttribute("aria-label", "Close");
+        closeBtn.textContent = "\u00d7";
+
+        var hint = document.createElement("div");
+        hint.className = "mermaid-lightbox-hint";
+        hint.textContent = "Scroll to zoom \u00b7 Drag to pan \u00b7 Esc to close";
+
+        overlay.appendChild(content);
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(hint);
+        document.body.appendChild(overlay);
+        document.body.style.overflow = "hidden";
+
+        var scale = 1, tx = 0, ty = 0;
+        var dragging = false, startX = 0, startY = 0, startTx = 0, startTy = 0;
+
+        function applyTransform() {
+          content.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + scale + ")";
+        }
+
+        // Center the SVG initially
+        var svgRect = content.firstChild.getBoundingClientRect();
+        tx = (window.innerWidth - svgRect.width) / 2;
+        ty = (window.innerHeight - svgRect.height) / 2;
+        applyTransform();
+
+        function close() {
+          document.body.removeChild(overlay);
+          document.body.style.overflow = "";
+        }
+
+        closeBtn.addEventListener("click", close);
+        overlay.addEventListener("click", function (ev) {
+          if (ev.target === overlay) close();
+        });
+
+        document.addEventListener("keydown", function handler(ev) {
+          if (ev.key === "Escape") {
+            close();
+            document.removeEventListener("keydown", handler);
+          }
+        });
+
+        overlay.addEventListener("wheel", function (ev) {
+          ev.preventDefault();
+          var rect = overlay.getBoundingClientRect();
+          var mx = ev.clientX - rect.left;
+          var my = ev.clientY - rect.top;
+
+          var prevScale = scale;
+          var delta = ev.deltaY > 0 ? 0.9 : 1.1;
+          scale = Math.min(Math.max(scale * delta, 0.1), 10);
+
+          tx = mx - (mx - tx) * (scale / prevScale);
+          ty = my - (my - ty) * (scale / prevScale);
+          applyTransform();
+        }, { passive: false });
+
+        overlay.addEventListener("mousedown", function (ev) {
+          if (ev.target === closeBtn) return;
+          dragging = true;
+          startX = ev.clientX;
+          startY = ev.clientY;
+          startTx = tx;
+          startTy = ty;
+        });
+
+        window.addEventListener("mousemove", function (ev) {
+          if (!dragging) return;
+          tx = startTx + (ev.clientX - startX);
+          ty = startTy + (ev.clientY - startY);
+          applyTransform();
+        });
+
+        window.addEventListener("mouseup", function () {
+          dragging = false;
+        });
+      });
+    })();
+  </script>
 </BaseLayout>

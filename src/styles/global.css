@@ -681,6 +681,73 @@ h4 {
 .markdown-body .mermaid {
   margin: 1.5rem 0;
   text-align: center;
+  cursor: zoom-in;
+}
+
+/* --- Mermaid Lightbox --- */
+.mermaid-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+.mermaid-lightbox:active {
+  cursor: grabbing;
+}
+
+.mermaid-lightbox-content {
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.mermaid-lightbox-content svg {
+  max-width: none;
+  max-height: none;
+}
+
+.mermaid-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.15s;
+}
+
+.mermaid-lightbox-close:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.mermaid-lightbox-hint {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  pointer-events: none;
 }
 
 .markdown-body strong {
