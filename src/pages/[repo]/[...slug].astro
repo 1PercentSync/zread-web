@@ -218,50 +218,51 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
   </script>
 
   <script is:inline>
-    if (document.querySelector(".mermaid")) {
+    (function () {
+      var els = document.querySelectorAll(".mermaid");
+      if (!els.length) return;
+
+      var darkVars = {
+        primaryColor: "#2a2520", primaryBorderColor: "#4a4540", primaryTextColor: "#e6e4de",
+        secondaryColor: "#1e1d1a", secondaryBorderColor: "#3a3530", tertiaryColor: "#252320",
+        lineColor: "#6a6560", textColor: "#e6e4de", mainBkg: "#2a2520", nodeBorder: "#4a4540",
+        clusterBkg: "#1e1d1a", clusterBorder: "#3a3530", titleColor: "#e6e4de", edgeLabelBackground: "#1b1a17",
+      };
+      var lightVars = {
+        primaryColor: "#fff3ec", primaryBorderColor: "#e6e4de", primaryTextColor: "#1d1b16",
+        secondaryColor: "#f4f2ed", secondaryBorderColor: "#e6e4de", tertiaryColor: "#f8f6f1",
+        lineColor: "#a09f9a", textColor: "#1d1b16", mainBkg: "#fff3ec", nodeBorder: "#e6e4de",
+        clusterBkg: "#f4f2ed", clusterBorder: "#e6e4de", titleColor: "#1d1b16", edgeLabelBackground: "#faf9f6",
+      };
+
+      // Store original mermaid source for re-rendering
+      var sources = [];
+      els.forEach(function (el) { sources.push(el.textContent); });
+
+      function renderMermaid() {
+        var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: isDark ? "dark" : "default",
+          themeVariables: isDark ? darkVars : lightVars,
+        });
+        els.forEach(function (el, i) {
+          el.removeAttribute("data-processed");
+          el.innerHTML = sources[i];
+        });
+        mermaid.run({ nodes: els });
+      }
+
       var s = document.createElement("script");
       s.src = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
       s.onload = function () {
-        var theme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "default";
-        var isDark = theme === "dark";
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: isDark ? "dark" : "default",
-          themeVariables: isDark ? {
-            primaryColor: "#2a2520",
-            primaryBorderColor: "#4a4540",
-            primaryTextColor: "#e6e4de",
-            secondaryColor: "#1e1d1a",
-            secondaryBorderColor: "#3a3530",
-            tertiaryColor: "#252320",
-            lineColor: "#6a6560",
-            textColor: "#e6e4de",
-            mainBkg: "#2a2520",
-            nodeBorder: "#4a4540",
-            clusterBkg: "#1e1d1a",
-            clusterBorder: "#3a3530",
-            titleColor: "#e6e4de",
-            edgeLabelBackground: "#1b1a17",
-          } : {
-            primaryColor: "#fff3ec",
-            primaryBorderColor: "#e6e4de",
-            primaryTextColor: "#1d1b16",
-            secondaryColor: "#f4f2ed",
-            secondaryBorderColor: "#e6e4de",
-            tertiaryColor: "#f8f6f1",
-            lineColor: "#a09f9a",
-            textColor: "#1d1b16",
-            mainBkg: "#fff3ec",
-            nodeBorder: "#e6e4de",
-            clusterBkg: "#f4f2ed",
-            clusterBorder: "#e6e4de",
-            titleColor: "#1d1b16",
-            edgeLabelBackground: "#faf9f6",
-          },
+        renderMermaid();
+        document.getElementById("theme-toggle").addEventListener("click", function () {
+          setTimeout(renderMermaid, 50);
         });
       };
       document.head.appendChild(s);
-    }
+    })();
   </script>
 
   <script is:inline>
