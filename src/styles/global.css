@@ -689,8 +689,7 @@ h4 {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
+  background: var(--bg);
   overflow: hidden;
   cursor: grab;
 }

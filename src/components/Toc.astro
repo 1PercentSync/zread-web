@@ -15,7 +15,7 @@ const { headings } = Astro.props;
           <a
             href={h.depth === 1 ? "#" : `#${h.id}`}
             class:list={["toc-link", `depth-${h.depth}`]}
-            data-top={h.depth === 1 ? "true" : undefined}
+            data-id={h.id}
           >
             {h.text}
           </a>
@@ -27,7 +27,9 @@ const { headings } = Astro.props;
 
 <script is:inline>
   (function () {
-    const links = document.querySelectorAll(".toc-link");
+    var toc = document.querySelector("aside.toc");
+    if (!toc) return;
+    var links = toc.querySelectorAll(".toc-link");
     if (!links.length) return;
 
     var headings = Array.from(
@@ -35,22 +37,22 @@ const { headings } = Astro.props;
     );
 
     function update() {
-      var scrollY = window.scrollY + 80;
       var active = null;
-      for (var i = headings.length - 1; i >= 0; i--) {
-        if (headings[i].offsetTop <= scrollY) {
-          active = headings[i];
-          break;
+      if (window.scrollY > 0) {
+        var scrollY = window.scrollY + 80;
+        for (var i = headings.length - 1; i >= 0; i--) {
+          if (headings[i].offsetTop <= scrollY) {
+            active = headings[i];
+            break;
+          }
         }
       }
       links.forEach(function (l) { l.classList.remove("active"); });
       if (active) {
-        var link = document.querySelector('.toc-link[href="#' + active.id + '"]');
+        var link = toc.querySelector('.toc-link[data-id="' + active.id + '"]');
         if (link) link.classList.add("active");
       } else {
-        // At very top of page, highlight the page title
-        var top = document.querySelector('.toc-link[data-top="true"]');
-        if (top) top.classList.add("active");
+        links[0].classList.add("active");
       }
     }
 
