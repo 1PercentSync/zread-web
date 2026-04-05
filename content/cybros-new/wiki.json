@@ -1,116 +1,251 @@
 {
-  "id": "2026-04-05-122329",
-  "generated_at": "2026-04-05T18:23:29.80292247Z",
+  "id": "2026-04-05-123221",
+  "generated_at": "2026-04-05T18:32:21.723359546Z",
   "language": "zh",
   "pages": [
     {
-      "slug": "1-overview",
-      "title": "Overview",
-      "file": "1-overview.md",
-      "section": "Get Started",
+      "slug": "1-xiang-mu-gai-lan-cybros-dan-cang-ku-jia-gou-yu-he-xin-ding-wei",
+      "title": "项目概览：Cybros 单仓库架构与核心定位",
+      "file": "1-xiang-mu-gai-lan-cybros-dan-cang-ku-jia-gou-yu-he-xin-ding-wei.md",
+      "section": "快速入门",
       "level": "Beginner"
     },
     {
-      "slug": "2-quick-start",
-      "title": "Quick Start",
-      "file": "2-quick-start.md",
-      "section": "Get Started",
+      "slug": "2-huan-jing-da-jian-yu-ben-di-kai-fa-qi-dong-zhi-nan",
+      "title": "环境搭建与本地开发启动指南",
+      "file": "2-huan-jing-da-jian-yu-ben-di-kai-fa-qi-dong-zhi-nan.md",
+      "section": "快速入门",
       "level": "Beginner"
     },
     {
-      "slug": "3-dan-cang-ku-kai-fa-huan-jing-yu-guan-jian-ming-ling",
-      "title": "单仓库开发环境与关键命令",
-      "file": "3-dan-cang-ku-kai-fa-huan-jing-yu-guan-jian-ming-ling.md",
-      "section": "Get Started",
-      "group": "入门路径",
-      "level": "Beginner"
-    },
-    {
-      "slug": "4-xiang-mu-bian-jie-yu-zhu-yao-jiao-se",
-      "title": "项目边界与主要角色",
-      "file": "4-xiang-mu-bian-jie-yu-zhu-yao-jiao-se.md",
-      "section": "Get Started",
-      "group": "入门路径",
-      "level": "Beginner"
-    },
-    {
-      "slug": "5-wen-dang-sheng-ming-zhou-qi-yu-yue-du-lu-xian",
-      "title": "文档生命周期与阅读路线",
-      "file": "5-wen-dang-sheng-ming-zhou-qi-yu-yue-du-lu-xian.md",
-      "section": "Get Started",
-      "group": "入门路径",
-      "level": "Beginner"
-    },
-    {
-      "slug": "6-nei-he-zhi-ze-hui-hua-gong-zuo-liu-yu-zhi-li",
-      "title": "内核职责：会话、工作流与治理",
-      "file": "6-nei-he-zhi-ze-hui-hua-gong-zuo-liu-yu-zhi-li.md",
-      "section": "Deep Dive",
-      "group": "核心内核",
+      "slug": "3-docker-compose-bu-shu-can-kao",
+      "title": "Docker Compose 部署参考",
+      "file": "3-docker-compose-bu-shu-can-kao.md",
+      "section": "快速入门",
       "level": "Intermediate"
     },
     {
-      "slug": "7-yun-xing-shi-mo-xing-kong-zhi-ping-mian-mailbox-yu-xie-zuo-ji-zhi",
-      "title": "运行时模型：控制平面、Mailbox 与协作机制",
-      "file": "7-yun-xing-shi-mo-xing-kong-zhi-ping-mian-mailbox-yu-xie-zuo-ji-zhi.md",
-      "section": "Deep Dive",
-      "group": "核心内核",
+      "slug": "4-liu-da-xian-jie-shang-xia-wen-yu-ling-yu-mo-xing-zong-lan",
+      "title": "六大限界上下文与领域模型总览",
+      "file": "4-liu-da-xian-jie-shang-xia-wen-yu-ling-yu-mo-xing-zong-lan.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "5-an-zhuang-shen-fen-yu-yong-hu-mo-xing",
+      "title": "安装、身份与用户模型",
+      "file": "5-an-zhuang-shen-fen-yu-yong-hu-mo-xing.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "6-dai-li-zhu-ce-neng-li-wo-shou-yu-bu-shu-sheng-ming-zhou-qi",
+      "title": "代理注册、能力握手与部署生命周期",
+      "file": "6-dai-li-zhu-ce-neng-li-wo-shou-yu-bu-shu-sheng-ming-zhou-qi.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
       "level": "Advanced"
     },
     {
-      "slug": "8-dui-lie-tuo-bu-yu-ti-gong-fang-zhun-ru-kong-zhi",
-      "title": "队列拓扑与提供方准入控制",
-      "file": "8-dui-lie-tuo-bu-yu-ti-gong-fang-zhun-ru-kong-zhi.md",
-      "section": "Deep Dive",
-      "group": "核心内核",
+      "slug": "7-hui-hua-lun-ci-yu-dui-hua-shu-jie-gou",
+      "title": "会话、轮次与对话树结构",
+      "file": "7-hui-hua-lun-ci-yu-dui-hua-shu-jie-gou.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "8-gong-zuo-liu-dag-zhi-xing-yin-qing-yu-diao-du-qi",
+      "title": "工作流 DAG 执行引擎与调度器",
+      "file": "8-gong-zuo-liu-dag-zhi-xing-yin-qing-yu-diao-du-qi.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
       "level": "Advanced"
     },
     {
-      "slug": "9-mo-ren-dai-li-cheng-xu-de-ding-wei-yu-chan-pin-bian-jie",
-      "title": "默认代理程序的定位与产品边界",
-      "file": "9-mo-ren-dai-li-cheng-xu-de-ding-wei-yu-chan-pin-bian-jie.md",
-      "section": "Deep Dive",
+      "slug": "9-provider-zhi-xing-xun-huan-lun-ci-qing-qiu-gong-ju-diao-yong-yu-jie-guo-chi-jiu-hua",
+      "title": "Provider 执行循环：轮次请求、工具调用与结果持久化",
+      "file": "9-provider-zhi-xing-xun-huan-lun-ci-qing-qiu-gong-ju-diao-yong-yu-jie-guo-chi-jiu-hua.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Advanced"
+    },
+    {
+      "slug": "10-you-xiang-kong-zhi-ping-mian-xiao-xi-tou-di-zu-ren-yu-shi-shi-tui-song",
+      "title": "邮箱控制平面：消息投递、租赁与实时推送",
+      "file": "10-you-xiang-kong-zhi-ping-mian-xiao-xi-tou-di-zu-ren-yu-shi-shi-tui-song.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "11-llm-provider-mu-lu-yu-mo-xing-xuan-ze-jie-xi",
+      "title": "LLM Provider 目录与模型选择解析",
+      "file": "11-llm-provider-mu-lu-yu-mo-xing-xuan-ze-jie-xi.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "12-gong-ju-zhi-li-bang-ding-yu-mcp-streamable-http-chuan-shu",
+      "title": "工具治理、绑定与 MCP Streamable HTTP 传输",
+      "file": "12-gong-ju-zhi-li-bang-ding-yu-mcp-streamable-http-chuan-shu.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "13-ren-lei-jiao-hu-yuan-yu-shen-pi-biao-dan-yu-ren-wu-qing-qiu",
+      "title": "人类交互原语：审批、表单与任务请求",
+      "file": "13-ren-lei-jiao-hu-yuan-yu-shen-pi-biao-dan-yu-ren-wu-qing-qiu.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "14-zi-dai-li-hui-hua-zhi-xing-zu-yue-yu-ke-guan-bi-zi-yuan-lu-you",
+      "title": "子代理会话、执行租约与可关闭资源路由",
+      "file": "14-zi-dai-li-hui-hua-zhi-xing-zu-yue-yu-ke-guan-bi-zi-yuan-lu-you.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Advanced"
+    },
+    {
+      "slug": "15-shi-yong-liang-ji-fei-zhi-xing-hua-xiang-yu-shen-ji-ri-zhi",
+      "title": "使用量计费、执行画像与审计日志",
+      "file": "15-shi-yong-liang-ji-fei-zhi-xing-hua-xiang-yu-shen-ji-ri-zhi.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "16-fa-bu-shi-shi-tou-ying-yu-dui-hua-dao-chu-dao-ru",
+      "title": "发布、实时投影与对话导出/导入",
+      "file": "16-fa-bu-shi-shi-tou-ying-yu-dui-hua-dao-chu-dao-ru.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "17-biao-shi-fu-ce-lue-public_id-yu-bigint-nei-bu-jian-de-bian-jie-gui-ze",
+      "title": "标识符策略：public_id 与 bigint 内部键的边界规则",
+      "file": "17-biao-shi-fu-ce-lue-public_id-yu-bigint-nei-bu-jian-de-bian-jie-gui-ze.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Beginner"
+    },
+    {
+      "slug": "18-yun-xing-shi-tuo-bu-yu-solid-queue-dui-lie-pei-zhi",
+      "title": "运行时拓扑与 Solid Queue 队列配置",
+      "file": "18-yun-xing-shi-tuo-bu-yu-solid-queue-dui-lie-pei-zhi.md",
+      "section": "深入理解",
+      "group": "Core Matrix 内核架构",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "19-fenix-chan-pin-ding-wei-yu-pei-dui-qing-dan-qi-yue",
+      "title": "Fenix 产品定位与配对清单契约",
+      "file": "19-fenix-chan-pin-ding-wei-yu-pei-dui-qing-dan-qi-yue.md",
+      "section": "深入理解",
       "group": "Fenix 代理程序",
       "level": "Intermediate"
     },
     {
-      "slug": "10-yun-xing-shi-qi-yue-zhu-ce-pei-dui-yu-kong-zhi-xun-huan",
-      "title": "运行时契约：注册、配对与控制循环",
-      "file": "10-yun-xing-shi-qi-yue-zhu-ce-pei-dui-yu-kong-zhi-xun-huan.md",
-      "section": "Deep Dive",
+      "slug": "20-kong-zhi-xun-huan-you-xiang-gong-zuo-qi-yu-shi-shi-hui-hua",
+      "title": "控制循环、邮箱工作器与实时会话",
+      "file": "20-kong-zhi-xun-huan-you-xiang-gong-zuo-qi-yu-shi-shi-hui-hua.md",
+      "section": "深入理解",
       "group": "Fenix 代理程序",
-      "level": "Advanced"
-    },
-    {
-      "slug": "11-gong-ju-neng-li-wang-ye-liu-lan-qi-yu-chang-sheng-ming-zhou-qi-jin-cheng",
-      "title": "工具能力：网页、浏览器与长生命周期进程",
-      "file": "11-gong-ju-neng-li-wang-ye-liu-lan-qi-yu-chang-sheng-ming-zhou-qi-jin-cheng.md",
-      "section": "Deep Dive",
-      "group": "Fenix 代理程序",
-      "level": "Advanced"
-    },
-    {
-      "slug": "12-jie-shou-xing-ce-shi-yu-shou-gong-hui-gui-liu-cheng",
-      "title": "接受性测试与手工回归流程",
-      "file": "12-jie-shou-xing-ce-shi-yu-shou-gong-hui-gui-liu-cheng.md",
-      "section": "Deep Dive",
-      "group": "验证与维护",
       "level": "Intermediate"
     },
     {
-      "slug": "13-ji-hua-she-ji-yu-jie-xiang-wen-dang-de-xie-zuo-fang-shi",
-      "title": "计划、设计与结项文档的协作方式",
-      "file": "13-ji-hua-she-ji-yu-jie-xiang-wen-dang-de-xie-zuo-fang-shi.md",
-      "section": "Deep Dive",
-      "group": "验证与维护",
+      "slug": "21-ji-neng-xi-tong-xi-tong-ji-neng-jing-xuan-ji-neng-yu-an-zhuang-guan-li",
+      "title": "技能系统：系统技能、精选技能与安装管理",
+      "file": "21-ji-neng-xi-tong-xi-tong-ji-neng-jing-xuan-ji-neng-yu-an-zhuang-guan-li.md",
+      "section": "深入理解",
+      "group": "Fenix 代理程序",
       "level": "Intermediate"
     },
     {
-      "slug": "14-yun-wei-can-shu-shu-ju-ku-chi-dui-lie-yu-dan-ji-bu-shu-ji-xian",
-      "title": "运维参数：数据库池、队列与单机部署基线",
-      "file": "14-yun-wei-can-shu-shu-ju-ku-chi-dui-lie-yu-dan-ji-bu-shu-ji-xian.md",
-      "section": "Deep Dive",
-      "group": "验证与维护",
+      "slug": "22-zhi-xing-gou-zi-shang-xia-wen-zhun-bei-ya-suo-gong-ju-shen-cha-yu-shu-chu-ding-xing",
+      "title": "执行钩子：上下文准备、压缩、工具审查与输出定型",
+      "file": "22-zhi-xing-gou-zi-shang-xia-wen-zhun-bei-ya-suo-gong-ju-shen-cha-yu-shu-chu-ding-xing.md",
+      "section": "深入理解",
+      "group": "Fenix 代理程序",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "23-cha-jian-ti-xi-yu-gong-ju-zhi-xing-qi-web-liu-lan-qi-jin-cheng-gong-zuo-qu",
+      "title": "插件体系与工具执行器（Web、浏览器、进程、工作区）",
+      "file": "23-cha-jian-ti-xi-yu-gong-ju-zhi-xing-qi-web-liu-lan-qi-jin-cheng-gong-zuo-qu.md",
+      "section": "深入理解",
+      "group": "Fenix 代理程序",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "24-program-api-dai-li-cheng-xu-ji-qi-dui-ji-qi-jie-kou",
+      "title": "Program API：代理程序机器对机器接口",
+      "file": "24-program-api-dai-li-cheng-xu-ji-qi-dui-ji-qi-jie-kou.md",
+      "section": "深入理解",
+      "group": "API 参考与契约",
+      "level": "Advanced"
+    },
+    {
+      "slug": "25-execution-api-yun-xing-shi-zi-yuan-kong-zhi-jie-kou",
+      "title": "Execution API：运行时资源控制接口",
+      "file": "25-execution-api-yun-xing-shi-zi-yuan-kong-zhi-jie-kou.md",
+      "section": "深入理解",
+      "group": "API 参考与契约",
+      "level": "Advanced"
+    },
+    {
+      "slug": "26-app-api-dui-hua-zhen-duan-dao-chu-yu-dao-ru-jie-kou",
+      "title": "App API：对话诊断、导出与导入接口",
+      "file": "26-app-api-dui-hua-zhen-duan-dao-chu-yu-dao-ru-jie-kou.md",
+      "section": "深入理解",
+      "group": "API 参考与契约",
+      "level": "Advanced"
+    },
+    {
+      "slug": "27-ce-shi-ti-xi-dan-yuan-ji-cheng-duan-dao-duan-yu-xi-tong-ce-shi",
+      "title": "测试体系：单元、集成、端到端与系统测试",
+      "file": "27-ce-shi-ti-xi-dan-yuan-ji-cheng-duan-dao-duan-yu-xi-tong-ce-shi.md",
+      "section": "深入理解",
+      "group": "质量保障与工程实践",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "28-yan-shou-ce-shi-chang-jing-yu-shou-dong-yan-zheng-qing-dan",
+      "title": "验收测试场景与手动验证清单",
+      "file": "28-yan-shou-ce-shi-chang-jing-yu-shou-dong-yan-zheng-qing-dan.md",
+      "section": "深入理解",
+      "group": "质量保障与工程实践",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "29-ci-liu-shui-xian-yu-dai-ma-zhi-liang-gong-ju-lian",
+      "title": "CI 流水线与代码质量工具链",
+      "file": "29-ci-liu-shui-xian-yu-dai-ma-zhi-liang-gong-ju-lian.md",
+      "section": "深入理解",
+      "group": "质量保障与工程实践",
+      "level": "Beginner"
+    },
+    {
+      "slug": "30-jia-gou-jian-kang-shen-ji-yu-die-dai-zhong-gou-fang-fa-lun",
+      "title": "架构健康审计与迭代重构方法论",
+      "file": "30-jia-gou-jian-kang-shen-ji-yu-die-dai-zhong-gou-fang-fa-lun.md",
+      "section": "深入理解",
+      "group": "设计决策与文档治理",
+      "level": "Advanced"
+    },
+    {
+      "slug": "31-wen-dang-sheng-ming-zhou-qi-cong-ti-an-she-ji-dao-gui-dang-ji-hua",
+      "title": "文档生命周期：从提案设计到归档计划",
+      "file": "31-wen-dang-sheng-ming-zhou-qi-cong-ti-an-she-ji-dao-gui-dang-ji-hua.md",
+      "section": "深入理解",
+      "group": "设计决策与文档治理",
       "level": "Advanced"
     }
   ]
