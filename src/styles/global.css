@@ -688,6 +688,11 @@ h4 {
   line-height: 1.6;
 }
 
+.markdown-body .mermaid {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
 .markdown-body strong {
   font-weight: 600;
 }
