@@ -244,19 +244,14 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
         var content = document.createElement("div");
         content.className = "mermaid-lightbox-content";
 
-        // Clone SVG and ensure viewBox for crisp vector scaling
+        // Clone SVG, ensure viewBox, remove inline size constraints
         var cloned = svg.cloneNode(true);
         var origW = parseFloat(svg.getAttribute("width")) || svg.getBoundingClientRect().width;
         var origH = parseFloat(svg.getAttribute("height")) || svg.getBoundingClientRect().height;
         if (!cloned.getAttribute("viewBox")) {
           cloned.setAttribute("viewBox", "0 0 " + origW + " " + origH);
         }
-        // Scale to fit viewport while keeping vector crispness
-        var fitScale = Math.min((window.innerWidth * 0.9) / origW, (window.innerHeight * 0.85) / origH, 2);
-        var renderW = origW * fitScale;
-        var renderH = origH * fitScale;
-        cloned.setAttribute("width", renderW);
-        cloned.setAttribute("height", renderH);
+        cloned.removeAttribute("style");
         content.appendChild(cloned);
 
         var closeBtn = document.createElement("button");
@@ -274,17 +269,22 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
         document.body.appendChild(overlay);
         document.body.style.overflow = "hidden";
 
-        // Center initially
-        var scale = 1;
-        var tx = (window.innerWidth - renderW) / 2;
-        var ty = (window.innerHeight - renderH) / 2;
+        // Fit to 90% of viewport, no upper cap
+        var scale = Math.min((window.innerWidth * 0.9) / origW, (window.innerHeight * 0.85) / origH);
+        var tx = (window.innerWidth - origW * scale) / 2;
+        var ty = (window.innerHeight - origH * scale) / 2;
         var dragging = false, didDrag = false;
         var startX = 0, startY = 0, startTx = 0, startTy = 0;
 
-        function applyTransform() {
-          content.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + scale + ")";
+        // Resize SVG attributes directly so browser renders vector at target size
+        function apply() {
+          var w = origW * scale;
+          var h = origH * scale;
+          cloned.setAttribute("width", w);
+          cloned.setAttribute("height", h);
+          content.style.transform = "translate(" + tx + "px," + ty + "px)";
         }
-        applyTransform();
+        apply();
 
         function close() {
           document.body.removeChild(overlay);
@@ -311,11 +311,12 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
 
           var prevScale = scale;
           var delta = ev.deltaY > 0 ? 0.9 : 1.1;
-          scale = Math.min(Math.max(scale * delta, 0.1), 10);
+          scale = Math.max(scale * delta, 0.1);
 
+          // Zoom toward mouse cursor
           tx = mx - (mx - tx) * (scale / prevScale);
           ty = my - (my - ty) * (scale / prevScale);
-          applyTransform();
+          apply();
         }, { passive: false });
 
         overlay.addEventListener("mousedown", function (ev) {
@@ -336,7 +337,7 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
           if (Math.abs(dx) > 3 || Math.abs(dy) > 3) didDrag = true;
           tx = startTx + dx;
           ty = startTy + dy;
-          applyTransform();
+          apply();
         });
 
         window.addEventListener("mouseup", function () {
