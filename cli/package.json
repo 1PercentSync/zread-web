@@ -1,0 +1,8 @@
+{
+  "name": "zread-web-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "zread-web": "./index.js"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "id": "2026-04-04-104734",
+  "generated_at": "2026-04-04T16:47:34.702109226Z",
+  "language": "zh",
+  "pages": [
+    {
+      "slug": "1-xiang-mu-gai-lan",
+      "title": "项目概览",
+      "file": "1-xiang-mu-gai-lan.md",
+      "section": "入门指南",
+      "level": "Beginner"
+    },
+    {
+      "slug": "2-kuai-su-kai-shi",
+      "title": "快速开始",
+      "file": "2-kuai-su-kai-shi.md",
+      "section": "入门指南",
+      "level": "Beginner"
+    },
+    {
+      "slug": "3-bian-yi-yu-gou-jian-liu-cheng",
+      "title": "编译与构建流程",
+      "file": "3-bian-yi-yu-gou-jian-liu-cheng.md",
+      "section": "入门指南",
+      "group": "开发环境配置",
+      "level": "Beginner"
+    },
+    {
+      "slug": "4-di-san-fang-ku-yi-lai-shuo-ming",
+      "title": "第三方库依赖说明",
+      "file": "4-di-san-fang-ku-yi-lai-shuo-ming.md",
+      "section": "入门指南",
+      "group": "开发环境配置",
+      "level": "Beginner"
+    },
+    {
+      "slug": "5-ming-ming-yue-ding-yu-dai-ma-feng-ge",
+      "title": "命名约定与代码风格",
+      "file": "5-ming-ming-yue-ding-yu-dai-ma-feng-ge.md",
+      "section": "入门指南",
+      "group": "编码规范",
+      "level": "Beginner"
+    },
+    {
+      "slug": "6-wen-dang-zhu-shi-gui-fan",
+      "title": "文档注释规范",
+      "file": "6-wen-dang-zhu-shi-gui-fan.md",
+      "section": "入门指南",
+      "group": "编码规范",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "7-si-ceng-jia-gou-she-ji",
+      "title": "四层架构设计",
+      "file": "7-si-ceng-jia-gou-she-ji.md",
+      "section": "架构详解",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "8-rhiceng-vulkanchou-xiang-ceng",
+      "title": "RHI层 - Vulkan抽象层",
+      "file": "8-rhiceng-vulkanchou-xiang-ceng.md",
+      "section": "架构详解",
+      "group": "核心基础设施",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "9-xuan-ran-kuang-jia-ceng-zi-yuan-yu-tu-guan-li",
+      "title": "渲染框架层 - 资源与图管理",
+      "file": "9-xuan-ran-kuang-jia-ceng-zi-yuan-yu-tu-guan-li.md",
+      "section": "架构详解",
+      "group": "核心基础设施",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "10-xuan-ran-passceng-xiao-guo-shi-xian",
+      "title": "渲染Pass层 - 效果实现",
+      "file": "10-xuan-ran-passceng-xiao-guo-shi-xian.md",
+      "section": "架构详解",
+      "group": "核心基础设施",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "11-ying-yong-ceng-chang-jing-yu-jiao-hu",
+      "title": "应用层 - 场景与交互",
+      "file": "11-ying-yong-ceng-chang-jing-yu-jiao-hu.md",
+      "section": "架构详解",
+      "group": "核心基础设施",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "12-render-graphzi-yuan-guan-li",
+      "title": "Render Graph资源管理",
+      "file": "12-render-graphzi-yuan-guan-li.md",
+      "section": "架构详解",
+      "group": "关键技术组件",
+      "level": "Advanced"
+    },
+    {
+      "slug": "13-cai-zhi-xi-tong-jia-gou",
+      "title": "材质系统架构",
+      "file": "13-cai-zhi-xi-tong-jia-gou.md",
+      "section": "架构详解",
+      "group": "关键技术组件",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "14-bindlessmiao-shu-fu-guan-li",
+      "title": "Bindless描述符管理",
+      "file": "14-bindlessmiao-shu-fu-guan-li.md",
+      "section": "架构详解",
+      "group": "关键技术组件",
+      "level": "Advanced"
+    },
+    {
+      "slug": "15-shi-yu-shu-ju-yu-temporal-filtering",
+      "title": "时域数据与Temporal Filtering",
+      "file": "15-shi-yu-shu-ju-yu-temporal-filtering.md",
+      "section": "架构详解",
+      "group": "关键技术组件",
+      "level": "Advanced"
+    },
+    {
+      "slug": "16-passxi-tong-gai-shu",
+      "title": "Pass系统概述",
+      "file": "16-passxi-tong-gai-shu.md",
+      "section": "渲染Pass详解",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "17-shen-du-yu-xuan-ran-pass",
+      "title": "深度预渲染Pass",
+      "file": "17-shen-du-yu-xuan-ran-pass.md",
+      "section": "渲染Pass详解",
+      "group": "几何与基础渲染",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "18-qian-xiang-xuan-ran-pass",
+      "title": "前向渲染Pass",
+      "file": "18-qian-xiang-xuan-ran-pass.md",
+      "section": "渲染Pass详解",
+      "group": "几何与基础渲染",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "19-tian-kong-he-pass",
+      "title": "天空盒Pass",
+      "file": "19-tian-kong-he-pass.md",
+      "section": "渲染Pass详解",
+      "group": "几何与基础渲染",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "20-ji-lian-yin-ying-ying-she-pass",
+      "title": "级联阴影映射Pass",
+      "file": "20-ji-lian-yin-ying-ying-she-pass.md",
+      "section": "渲染Pass详解",
+      "group": "阴影系统",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "21-jie-hong-yin-ying-pass",
+      "title": "接触阴影Pass",
+      "file": "21-jie-hong-yin-ying-pass.md",
+      "section": "渲染Pass详解",
+      "group": "阴影系统",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "22-gtaosuan-fa-shi-xian",
+      "title": "GTAO算法实现",
+      "file": "22-gtaosuan-fa-shi-xian.md",
+      "section": "渲染Pass详解",
+      "group": "环境光遮蔽",
+      "level": "Advanced"
+    },
+    {
+      "slug": "23-shi-yu-jiang-zao-pass",
+      "title": "时域降噪Pass",
+      "file": "23-shi-yu-jiang-zao-pass.md",
+      "section": "渲染Pass详解",
+      "group": "环境光遮蔽",
+      "level": "Advanced"
+    },
+    {
+      "slug": "24-se-diao-ying-she-pass",
+      "title": "色调映射Pass",
+      "file": "24-se-diao-ying-she-pass.md",
+      "section": "渲染Pass详解",
+      "group": "后处理管线",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "25-rtji-chu-she-shi-yu-jia-su-jie-gou",
+      "title": "RT基础设施与加速结构",
+      "file": "25-rtji-chu-she-shi-yu-jia-su-jie-gou.md",
+      "section": "渲染Pass详解",
+      "group": "光线追踪",
+      "level": "Advanced"
+    },
+    {
+      "slug": "26-lu-jing-zhui-zong-can-kao-shi-tu",
+      "title": "路径追踪参考视图",
+      "file": "26-lu-jing-zhui-zong-can-kao-shi-tu.md",
+      "section": "渲染Pass详解",
+      "group": "光线追踪",
+      "level": "Advanced"
+    },
+    {
+      "slug": "27-milestone-1-jing-tai-chang-jing-yan-shi",
+      "title": "Milestone 1 - 静态场景演示",
+      "file": "27-milestone-1-jing-tai-chang-jing-yan-shi.md",
+      "section": "项目路线图",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "28-milestone-2-hua-zhi-quan-mian-ti-sheng",
+      "title": "Milestone 2 - 画质全面提升",
+      "file": "28-milestone-2-hua-zhi-quan-mian-ti-sheng.md",
+      "section": "项目路线图",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "29-milestone-3-dong-tai-wu-ti-yu-xing-neng-you-hua",
+      "title": "Milestone 3 - 动态物体与性能优化",
+      "file": "29-milestone-3-dong-tai-wu-ti-yu-xing-neng-you-hua.md",
+      "section": "项目路线图",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "30-yuan-qi-mu-biao-gui-hua",
+      "title": "远期目标规划",
+      "file": "30-yuan-qi-mu-biao-gui-hua.md",
+      "section": "项目路线图",
+      "level": "Advanced"
+    },
+    {
+      "slug": "31-ji-zhu-xuan-xing-yuan-ze-yu-li-nian",
+      "title": "技术选型原则与理念",
+      "file": "31-ji-zhu-xuan-xing-yuan-ze-yu-li-nian.md",
+      "section": "技术决策参考",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "32-jia-gou-yue-shu-yu-bian-jie",
+      "title": "架构约束与边界",
+      "file": "32-jia-gou-yue-shu-yu-bian-jie.md",
+      "section": "技术决策参考",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "33-shi-shi-giyu-hong-bei-fang-an-yan-jin",
+      "title": "实时GI与烘焙方案演进",
+      "file": "33-shi-shi-giyu-hong-bei-fang-an-yan-jin.md",
+      "section": "技术决策参考",
+      "level": "Advanced"
+    },
+    {
+      "slug": "34-zhao-se-qi-gui-fan-yu-bian-yi-liu-cheng",
+      "title": "着色器规范与编译流程",
+      "file": "34-zhao-se-qi-gui-fan-yu-bian-yi-liu-cheng.md",
+      "section": "着色器开发",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "35-brdfyu-guang-zhao-ji-suan",
+      "title": "BRDF与光照计算",
+      "file": "35-brdfyu-guang-zhao-ji-suan.md",
+      "section": "着色器开发",
+      "group": "核心着色器库",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "36-gong-gong-gong-ju-han-shu",
+      "title": "公共工具函数",
+      "file": "36-gong-gong-gong-ju-han-shu.md",
+      "section": "着色器开发",
+      "group": "核心着色器库",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "37-rtguan-xian-zhao-se-qi-zu",
+      "title": "RT管线着色器组",
+      "file": "37-rtguan-xian-zhao-se-qi-zu.md",
+      "section": "着色器开发",
+      "group": "光线追踪着色器",
+      "level": "Advanced"
+    }
+  ]
+}

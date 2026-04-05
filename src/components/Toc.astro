@@ -1,0 +1,60 @@
+---
+interface Props {
+  headings: { depth: number; text: string; id: string }[];
+}
+
+const { headings } = Astro.props;
+---
+
+{headings.length > 0 && (
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <ul class="toc-list">
+      {headings.map((h) => (
+        <li>
+          <a
+            href={h.depth === 1 ? "#" : `#${h.id}`}
+            class:list={["toc-link", `depth-${h.depth}`]}
+            data-top={h.depth === 1 ? "true" : undefined}
+          >
+            {h.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}
+
+<script is:inline>
+  (function () {
+    const links = document.querySelectorAll(".toc-link");
+    if (!links.length) return;
+
+    var headings = Array.from(
+      document.querySelectorAll(".wiki-main h1[id], .wiki-main h2[id], .wiki-main h3[id]")
+    );
+
+    function update() {
+      var scrollY = window.scrollY + 80;
+      var active = null;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        if (headings[i].offsetTop <= scrollY) {
+          active = headings[i];
+          break;
+        }
+      }
+      links.forEach(function (l) { l.classList.remove("active"); });
+      if (active) {
+        var link = document.querySelector('.toc-link[href="#' + active.id + '"]');
+        if (link) link.classList.add("active");
+      } else {
+        // At very top of page, highlight the page title
+        var top = document.querySelector('.toc-link[data-top="true"]');
+        if (top) top.classList.add("active");
+      }
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  })();
+</script>

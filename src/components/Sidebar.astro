@@ -1,0 +1,40 @@
+---
+import type { NavSection } from "../lib/content";
+
+interface Props {
+  sections: NavSection[];
+  repoSlug: string;
+  currentSlug: string;
+}
+
+const { sections, repoSlug, currentSlug } = Astro.props;
+---
+
+<nav class="sidebar" id="sidebar">
+  {sections.map((section) => (
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">{section.name}</div>
+      {section.groups.map((group) => (
+        <>
+          {group.name && group.pages[0] && (
+            <a href={`/${repoSlug}/${group.pages[0].slug}`} class="sidebar-group-title">
+              {group.name}
+            </a>
+          )}
+          {group.pages.map((page) => (
+            <a
+              href={`/${repoSlug}/${page.slug}`}
+              class:list={[
+                "sidebar-link",
+                { "in-group": !!group.name },
+                { active: page.slug === currentSlug },
+              ]}
+            >
+              <span>{page.title}</span>
+            </a>
+          ))}
+        </>
+      ))}
+    </div>
+  ))}
+</nav>
