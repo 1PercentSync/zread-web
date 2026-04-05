@@ -244,11 +244,16 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
         var content = document.createElement("div");
         content.className = "mermaid-lightbox-content";
 
-        // Clone SVG, ensure viewBox, remove inline size constraints
+        // Clone SVG, resolve intrinsic size from viewBox first
         var cloned = svg.cloneNode(true);
-        var origW = parseFloat(svg.getAttribute("width")) || svg.getBoundingClientRect().width;
-        var origH = parseFloat(svg.getAttribute("height")) || svg.getBoundingClientRect().height;
-        if (!cloned.getAttribute("viewBox")) {
+        var vb = (svg.getAttribute("viewBox") || "").split(/[\s,]+/).map(Number);
+        var origW, origH;
+        if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+          origW = vb[2];
+          origH = vb[3];
+        } else {
+          origW = svg.getBoundingClientRect().width;
+          origH = svg.getBoundingClientRect().height;
           cloned.setAttribute("viewBox", "0 0 " + origW + " " + origH);
         }
         cloned.removeAttribute("style");
