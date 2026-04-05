@@ -702,13 +702,14 @@ h4 {
 }
 
 .mermaid-lightbox-content {
-  transform-origin: 0 0;
   will-change: transform;
 }
 
 .mermaid-lightbox-content svg {
   max-width: none;
   max-height: none;
+  width: auto;
+  height: auto;
 }
 
 .mermaid-lightbox-close {

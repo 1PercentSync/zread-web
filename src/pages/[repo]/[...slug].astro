@@ -243,7 +243,25 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
 
         var content = document.createElement("div");
         content.className = "mermaid-lightbox-content";
-        content.innerHTML = svg.outerHTML;
+
+        // Clone SVG and ensure it uses viewBox for crisp vector scaling
+        var cloned = svg.cloneNode(true);
+        var origW = parseFloat(cloned.getAttribute("width")) || svg.getBoundingClientRect().width;
+        var origH = parseFloat(cloned.getAttribute("height")) || svg.getBoundingClientRect().height;
+        if (!cloned.getAttribute("viewBox")) {
+          cloned.setAttribute("viewBox", "0 0 " + origW + " " + origH);
+        }
+        cloned.removeAttribute("width");
+        cloned.removeAttribute("height");
+        cloned.removeAttribute("style");
+        // Render at a large base size for clarity
+        var fitScale = Math.min((window.innerWidth * 0.9) / origW, (window.innerHeight * 0.85) / origH, 1.5);
+        var renderW = origW * fitScale;
+        var renderH = origH * fitScale;
+        cloned.style.width = renderW + "px";
+        cloned.style.height = renderH + "px";
+        cloned.style.display = "block";
+        content.appendChild(cloned);
 
         var closeBtn = document.createElement("button");
         closeBtn.className = "mermaid-lightbox-close";
@@ -260,17 +278,16 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
         document.body.appendChild(overlay);
         document.body.style.overflow = "hidden";
 
-        var scale = 1, tx = 0, ty = 0;
-        var dragging = false, startX = 0, startY = 0, startTx = 0, startTy = 0;
+        // Center initially
+        var scale = 1;
+        var tx = (window.innerWidth - renderW) / 2;
+        var ty = (window.innerHeight - renderH) / 2;
+        var dragging = false, didDrag = false;
+        var startX = 0, startY = 0, startTx = 0, startTy = 0;
 
         function applyTransform() {
           content.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + scale + ")";
         }
-
-        // Center the SVG initially
-        var svgRect = content.firstChild.getBoundingClientRect();
-        tx = (window.innerWidth - svgRect.width) / 2;
-        ty = (window.innerHeight - svgRect.height) / 2;
         applyTransform();
 
         function close() {
@@ -280,6 +297,7 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
 
         closeBtn.addEventListener("click", close);
         overlay.addEventListener("click", function (ev) {
+          if (didDrag) { didDrag = false; return; }
           if (ev.target === overlay) close();
         });
 
@@ -292,9 +310,8 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
 
         overlay.addEventListener("wheel", function (ev) {
           ev.preventDefault();
-          var rect = overlay.getBoundingClientRect();
-          var mx = ev.clientX - rect.left;
-          var my = ev.clientY - rect.top;
+          var mx = ev.clientX;
+          var my = ev.clientY;
 
           var prevScale = scale;
           var delta = ev.deltaY > 0 ? 0.9 : 1.1;
@@ -307,7 +324,9 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
 
         overlay.addEventListener("mousedown", function (ev) {
           if (ev.target === closeBtn) return;
+          ev.preventDefault();
           dragging = true;
+          didDrag = false;
           startX = ev.clientX;
           startY = ev.clientY;
           startTx = tx;
@@ -316,8 +335,11 @@ const pageTitle = `${currentPage.title} - ${repoMeta.name}`;
 
         window.addEventListener("mousemove", function (ev) {
           if (!dragging) return;
-          tx = startTx + (ev.clientX - startX);
-          ty = startTy + (ev.clientY - startY);
+          var dx = ev.clientX - startX;
+          var dy = ev.clientY - startY;
+          if (Math.abs(dx) > 3 || Math.abs(dy) > 3) didDrag = true;
+          tx = startTx + dx;
+          ty = startTy + dy;
           applyTransform();
         });
 
