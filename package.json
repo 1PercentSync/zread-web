@@ -12,6 +12,7 @@
     "katex": "^0.16.45",
     "marked": "^17.0.6",
     "marked-katex-extension": "^5.1.7",
+    "sarasa-mono-web": "^0.1.0",
     "shiki": "^4.0.2"
   }
 }
