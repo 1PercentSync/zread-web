@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar.astro";
 import Toc from "../../components/Toc.astro";
 import { getRepos, getWiki, getPageContent, buildNavigation, extractHeadings } from "../../lib/content";
 import { Marked } from "marked";
+import markedKatex from "marked-katex-extension";
 
 export function getStaticPaths() {
   const repos = getRepos();
@@ -56,8 +57,10 @@ const headings = [
   ...extractHeadings(rawMarkdown),
 ];
 
-// Add IDs to headings in the HTML output
-const marked = new Marked({
+// Add IDs to headings and KaTeX support
+const marked = new Marked();
+marked.use(markedKatex({ throwOnError: false }));
+marked.use({
   renderer: {
     heading({ text, depth }: { text: string; depth: number }) {
       const id = text
