@@ -1,5 +1,12 @@
 [
   {
+    "slug": "cybros-new",
+    "name": "cybros.new",
+    "github": "https://github.com/jasl/cybros.new",
+    "pageCount": 14,
+    "updatedAt": "2026-04-05T18:23:29.80292247Z"
+  },
+  {
     "slug": "himalaya",
     "name": "himalaya",
     "github": "https://github.com/1PercentSync/himalaya",

@@ -1,0 +1,117 @@
+{
+  "id": "2026-04-05-122329",
+  "generated_at": "2026-04-05T18:23:29.80292247Z",
+  "language": "zh",
+  "pages": [
+    {
+      "slug": "1-overview",
+      "title": "Overview",
+      "file": "1-overview.md",
+      "section": "Get Started",
+      "level": "Beginner"
+    },
+    {
+      "slug": "2-quick-start",
+      "title": "Quick Start",
+      "file": "2-quick-start.md",
+      "section": "Get Started",
+      "level": "Beginner"
+    },
+    {
+      "slug": "3-dan-cang-ku-kai-fa-huan-jing-yu-guan-jian-ming-ling",
+      "title": "单仓库开发环境与关键命令",
+      "file": "3-dan-cang-ku-kai-fa-huan-jing-yu-guan-jian-ming-ling.md",
+      "section": "Get Started",
+      "group": "入门路径",
+      "level": "Beginner"
+    },
+    {
+      "slug": "4-xiang-mu-bian-jie-yu-zhu-yao-jiao-se",
+      "title": "项目边界与主要角色",
+      "file": "4-xiang-mu-bian-jie-yu-zhu-yao-jiao-se.md",
+      "section": "Get Started",
+      "group": "入门路径",
+      "level": "Beginner"
+    },
+    {
+      "slug": "5-wen-dang-sheng-ming-zhou-qi-yu-yue-du-lu-xian",
+      "title": "文档生命周期与阅读路线",
+      "file": "5-wen-dang-sheng-ming-zhou-qi-yu-yue-du-lu-xian.md",
+      "section": "Get Started",
+      "group": "入门路径",
+      "level": "Beginner"
+    },
+    {
+      "slug": "6-nei-he-zhi-ze-hui-hua-gong-zuo-liu-yu-zhi-li",
+      "title": "内核职责：会话、工作流与治理",
+      "file": "6-nei-he-zhi-ze-hui-hua-gong-zuo-liu-yu-zhi-li.md",
+      "section": "Deep Dive",
+      "group": "核心内核",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "7-yun-xing-shi-mo-xing-kong-zhi-ping-mian-mailbox-yu-xie-zuo-ji-zhi",
+      "title": "运行时模型：控制平面、Mailbox 与协作机制",
+      "file": "7-yun-xing-shi-mo-xing-kong-zhi-ping-mian-mailbox-yu-xie-zuo-ji-zhi.md",
+      "section": "Deep Dive",
+      "group": "核心内核",
+      "level": "Advanced"
+    },
+    {
+      "slug": "8-dui-lie-tuo-bu-yu-ti-gong-fang-zhun-ru-kong-zhi",
+      "title": "队列拓扑与提供方准入控制",
+      "file": "8-dui-lie-tuo-bu-yu-ti-gong-fang-zhun-ru-kong-zhi.md",
+      "section": "Deep Dive",
+      "group": "核心内核",
+      "level": "Advanced"
+    },
+    {
+      "slug": "9-mo-ren-dai-li-cheng-xu-de-ding-wei-yu-chan-pin-bian-jie",
+      "title": "默认代理程序的定位与产品边界",
+      "file": "9-mo-ren-dai-li-cheng-xu-de-ding-wei-yu-chan-pin-bian-jie.md",
+      "section": "Deep Dive",
+      "group": "Fenix 代理程序",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "10-yun-xing-shi-qi-yue-zhu-ce-pei-dui-yu-kong-zhi-xun-huan",
+      "title": "运行时契约：注册、配对与控制循环",
+      "file": "10-yun-xing-shi-qi-yue-zhu-ce-pei-dui-yu-kong-zhi-xun-huan.md",
+      "section": "Deep Dive",
+      "group": "Fenix 代理程序",
+      "level": "Advanced"
+    },
+    {
+      "slug": "11-gong-ju-neng-li-wang-ye-liu-lan-qi-yu-chang-sheng-ming-zhou-qi-jin-cheng",
+      "title": "工具能力：网页、浏览器与长生命周期进程",
+      "file": "11-gong-ju-neng-li-wang-ye-liu-lan-qi-yu-chang-sheng-ming-zhou-qi-jin-cheng.md",
+      "section": "Deep Dive",
+      "group": "Fenix 代理程序",
+      "level": "Advanced"
+    },
+    {
+      "slug": "12-jie-shou-xing-ce-shi-yu-shou-gong-hui-gui-liu-cheng",
+      "title": "接受性测试与手工回归流程",
+      "file": "12-jie-shou-xing-ce-shi-yu-shou-gong-hui-gui-liu-cheng.md",
+      "section": "Deep Dive",
+      "group": "验证与维护",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "13-ji-hua-she-ji-yu-jie-xiang-wen-dang-de-xie-zuo-fang-shi",
+      "title": "计划、设计与结项文档的协作方式",
+      "file": "13-ji-hua-she-ji-yu-jie-xiang-wen-dang-de-xie-zuo-fang-shi.md",
+      "section": "Deep Dive",
+      "group": "验证与维护",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "14-yun-wei-can-shu-shu-ju-ku-chi-dui-lie-yu-dan-ji-bu-shu-ji-xian",
+      "title": "运维参数：数据库池、队列与单机部署基线",
+      "file": "14-yun-wei-can-shu-shu-ju-ku-chi-dui-lie-yu-dan-ji-bu-shu-ji-xian.md",
+      "section": "Deep Dive",
+      "group": "验证与维护",
+      "level": "Advanced"
+    }
+  ]
+}

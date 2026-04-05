@@ -2,6 +2,9 @@
   "name": "zread-web",
   "type": "module",
   "private": true,
+  "bin": {
+    "zreadw": "cli/index.js"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
