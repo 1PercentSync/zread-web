@@ -1,6 +1,6 @@
 {
-  "id": "2026-04-05-073936",
-  "generated_at": "2026-04-05T13:39:36.687815905Z",
+  "id": "2026-04-06-130213",
+  "generated_at": "2026-04-06T19:02:13.183259466Z",
   "language": "en",
   "pages": [
     {
@@ -11,216 +11,265 @@
       "level": "Beginner"
     },
     {
-      "slug": "2-quick-start-build-environment-and-dependencies",
-      "title": "Quick Start — Build Environment and Dependencies",
-      "file": "2-quick-start-build-environment-and-dependencies.md",
+      "slug": "2-quick-start",
+      "title": "Quick Start",
+      "file": "2-quick-start.md",
       "section": "Get Started",
       "level": "Beginner"
     },
     {
-      "slug": "3-coding-conventions-and-naming-standards",
-      "title": "Coding Conventions and Naming Standards",
-      "file": "3-coding-conventions-and-naming-standards.md",
+      "slug": "3-development-environment-setup",
+      "title": "Development Environment Setup",
+      "file": "3-development-environment-setup.md",
       "section": "Get Started",
       "level": "Beginner"
     },
     {
-      "slug": "4-project-structure-and-layered-architecture",
-      "title": "Project Structure and Layered Architecture",
-      "file": "4-project-structure-and-layered-architecture.md",
+      "slug": "4-requirements-and-design-philosophy",
+      "title": "Requirements and Design Philosophy",
+      "file": "4-requirements-and-design-philosophy.md",
       "section": "Get Started",
+      "group": "Project Fundamentals",
       "level": "Beginner"
     },
     {
-      "slug": "5-gpu-context-lifecycle-instance-device-queues-and-memory",
-      "title": "GPU Context Lifecycle — Instance, Device, Queues, and Memory",
-      "file": "5-gpu-context-lifecycle-instance-device-queues-and-memory.md",
-      "section": "Deep Dive",
-      "group": "Layer 0 — Vulkan Abstraction (RHI)",
+      "slug": "5-architecture-overview",
+      "title": "Architecture Overview",
+      "file": "5-architecture-overview.md",
+      "section": "Get Started",
+      "group": "Project Fundamentals",
       "level": "Intermediate"
     },
     {
-      "slug": "6-resource-management-generation-based-handles-buffers-images-and-samplers",
-      "title": "Resource Management — Generation-Based Handles, Buffers, Images, and Samplers",
-      "file": "6-resource-management-generation-based-handles-buffers-images-and-samplers.md",
-      "section": "Deep Dive",
-      "group": "Layer 0 — Vulkan Abstraction (RHI)",
+      "slug": "6-technical-decisions-and-technology-stack",
+      "title": "Technical Decisions and Technology Stack",
+      "file": "6-technical-decisions-and-technology-stack.md",
+      "section": "Get Started",
+      "group": "Project Fundamentals",
       "level": "Intermediate"
     },
     {
-      "slug": "7-bindless-descriptor-architecture-three-set-layout-and-texture-registration",
-      "title": "Bindless Descriptor Architecture — Three-Set Layout and Texture Registration",
-      "file": "7-bindless-descriptor-architecture-three-set-layout-and-texture-registration.md",
+      "slug": "7-context-and-device-management",
+      "title": "Context and Device Management",
+      "file": "7-context-and-device-management.md",
       "section": "Deep Dive",
-      "group": "Layer 0 — Vulkan Abstraction (RHI)",
+      "group": "Layer 0 — RHI (Rendering Hardware Interface)",
       "level": "Advanced"
     },
     {
-      "slug": "8-shader-compilation-pipeline-runtime-glsl-to-spir-v-and-hot-reload",
-      "title": "Shader Compilation Pipeline — Runtime GLSL to SPIR-V and Hot Reload",
-      "file": "8-shader-compilation-pipeline-runtime-glsl-to-spir-v-and-hot-reload.md",
+      "slug": "8-resource-management-buffers-images-samplers",
+      "title": "Resource Management (Buffers, Images, Samplers)",
+      "file": "8-resource-management-buffers-images-samplers.md",
       "section": "Deep Dive",
-      "group": "Layer 0 — Vulkan Abstraction (RHI)",
-      "level": "Intermediate"
-    },
-    {
-      "slug": "9-render-graph-automatic-barrier-insertion-and-pass-orchestration",
-      "title": "Render Graph — Automatic Barrier Insertion and Pass Orchestration",
-      "file": "9-render-graph-automatic-barrier-insertion-and-pass-orchestration.md",
-      "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
+      "group": "Layer 0 — RHI (Rendering Hardware Interface)",
       "level": "Advanced"
     },
     {
-      "slug": "10-material-system-gpu-data-layout-and-bindless-texture-indexing",
-      "title": "Material System — GPU Data Layout and Bindless Texture Indexing",
-      "file": "10-material-system-gpu-data-layout-and-bindless-texture-indexing.md",
+      "slug": "9-pipeline-and-shader-system",
+      "title": "Pipeline and Shader System",
+      "file": "9-pipeline-and-shader-system.md",
       "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
+      "group": "Layer 0 — RHI (Rendering Hardware Interface)",
+      "level": "Advanced"
+    },
+    {
+      "slug": "10-command-buffer-and-synchronization",
+      "title": "Command Buffer and Synchronization",
+      "file": "10-command-buffer-and-synchronization.md",
+      "section": "Deep Dive",
+      "group": "Layer 0 — RHI (Rendering Hardware Interface)",
+      "level": "Advanced"
+    },
+    {
+      "slug": "11-ray-tracing-infrastructure-as-rt-pipeline",
+      "title": "Ray Tracing Infrastructure (AS, RT Pipeline)",
+      "file": "11-ray-tracing-infrastructure-as-rt-pipeline.md",
+      "section": "Deep Dive",
+      "group": "Layer 0 — RHI (Rendering Hardware Interface)",
+      "level": "Advanced"
+    },
+    {
+      "slug": "12-render-graph-system",
+      "title": "Render Graph System",
+      "file": "12-render-graph-system.md",
+      "section": "Deep Dive",
+      "group": "Layer 1 — Render Framework",
       "level": "Intermediate"
     },
     {
-      "slug": "11-mesh-management-unified-vertex-format-and-gpu-upload",
-      "title": "Mesh Management — Unified Vertex Format and GPU Upload",
-      "file": "11-mesh-management-unified-vertex-format-and-gpu-upload.md",
+      "slug": "13-material-system-and-pbr",
+      "title": "Material System and PBR",
+      "file": "13-material-system-and-pbr.md",
       "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
+      "group": "Layer 1 — Render Framework",
       "level": "Intermediate"
     },
     {
-      "slug": "12-image-based-lighting-hdr-environment-to-irradiance-prefilter-and-brdf-lut",
-      "title": "Image-Based Lighting — HDR Environment to Irradiance, Prefilter, and BRDF LUT",
-      "file": "12-image-based-lighting-hdr-environment-to-irradiance-prefilter-and-brdf-lut.md",
+      "slug": "14-mesh-and-geometry-management",
+      "title": "Mesh and Geometry Management",
+      "file": "14-mesh-and-geometry-management.md",
       "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
+      "group": "Layer 1 — Render Framework",
       "level": "Intermediate"
     },
     {
-      "slug": "13-scene-data-contract-application-to-renderer-interface-and-culling",
-      "title": "Scene Data Contract — Application-to-Renderer Interface and Culling",
-      "file": "13-scene-data-contract-application-to-renderer-interface-and-culling.md",
+      "slug": "15-camera-lighting-and-shadows",
+      "title": "Camera, Lighting, and Shadows",
+      "file": "15-camera-lighting-and-shadows.md",
       "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
+      "group": "Layer 1 — Render Framework",
       "level": "Intermediate"
     },
     {
-      "slug": "14-frustum-culling-and-instanced-draw-group-construction",
-      "title": "Frustum Culling and Instanced Draw Group Construction",
-      "file": "14-frustum-culling-and-instanced-draw-group-construction.md",
+      "slug": "16-scene-data-and-culling",
+      "title": "Scene Data and Culling",
+      "file": "16-scene-data-and-culling.md",
       "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
+      "group": "Layer 1 — Render Framework",
       "level": "Intermediate"
     },
     {
-      "slug": "15-shadow-cascade-computation-csm-split-strategies-and-texel-snapping",
-      "title": "Shadow Cascade Computation — CSM Split Strategies and Texel Snapping",
-      "file": "15-shadow-cascade-computation-csm-split-strategies-and-texel-snapping.md",
+      "slug": "17-ibl-and-texture-processing",
+      "title": "IBL and Texture Processing",
+      "file": "17-ibl-and-texture-processing.md",
       "section": "Deep Dive",
-      "group": "Layer 1 — Rendering Framework",
-      "level": "Intermediate"
+      "group": "Layer 1 — Render Framework",
+      "level": "Advanced"
     },
     {
-      "slug": "16-depth-prepass-z-fill-for-zero-overdraw-forward-rendering",
-      "title": "Depth Prepass — Z-Fill for Zero-Overdraw Forward Rendering",
-      "file": "16-depth-prepass-z-fill-for-zero-overdraw-forward-rendering.md",
+      "slug": "18-depth-prepass-and-forward-rendering",
+      "title": "Depth PrePass and Forward Rendering",
+      "file": "18-depth-prepass-and-forward-rendering.md",
       "section": "Deep Dive",
       "group": "Layer 2 — Render Passes",
       "level": "Intermediate"
     },
     {
-      "slug": "17-forward-pass-cook-torrance-pbr-ibl-split-sum-and-multi-bounce-ao",
-      "title": "Forward Pass — Cook-Torrance PBR, IBL Split-Sum, and Multi-Bounce AO",
-      "file": "17-forward-pass-cook-torrance-pbr-ibl-split-sum-and-multi-bounce-ao.md",
+      "slug": "19-shadow-mapping-csm-and-contact-shadows",
+      "title": "Shadow Mapping (CSM) and Contact Shadows",
+      "file": "19-shadow-mapping-csm-and-contact-shadows.md",
+      "section": "Deep Dive",
+      "group": "Layer 2 — Render Passes",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "20-ambient-occlusion-gtao",
+      "title": "Ambient Occlusion (GTAO)",
+      "file": "20-ambient-occlusion-gtao.md",
+      "section": "Deep Dive",
+      "group": "Layer 2 — Render Passes",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "21-path-tracing-reference-view",
+      "title": "Path Tracing Reference View",
+      "file": "21-path-tracing-reference-view.md",
       "section": "Deep Dive",
       "group": "Layer 2 — Render Passes",
       "level": "Advanced"
     },
     {
-      "slug": "18-shadow-pass-csm-rendering-pcf-and-pcss-contact-hardening-soft-shadows",
-      "title": "Shadow Pass — CSM Rendering, PCF, and PCSS Contact-Hardening Soft Shadows",
-      "file": "18-shadow-pass-csm-rendering-pcf-and-pcss-contact-hardening-soft-shadows.md",
-      "section": "Deep Dive",
-      "group": "Layer 2 — Render Passes",
-      "level": "Advanced"
-    },
-    {
-      "slug": "19-gtao-pass-horizon-based-ambient-occlusion-with-spatial-and-temporal-denoising",
-      "title": "GTAO Pass — Horizon-Based Ambient Occlusion with Spatial and Temporal Denoising",
-      "file": "19-gtao-pass-horizon-based-ambient-occlusion-with-spatial-and-temporal-denoising.md",
-      "section": "Deep Dive",
-      "group": "Layer 2 — Render Passes",
-      "level": "Advanced"
-    },
-    {
-      "slug": "20-contact-shadows-pass-screen-space-per-pixel-ray-marching",
-      "title": "Contact Shadows Pass — Screen-Space Per-Pixel Ray Marching",
-      "file": "20-contact-shadows-pass-screen-space-per-pixel-ray-marching.md",
+      "slug": "22-post-processing-pipeline",
+      "title": "Post-Processing Pipeline",
+      "file": "22-post-processing-pipeline.md",
       "section": "Deep Dive",
       "group": "Layer 2 — Render Passes",
       "level": "Intermediate"
     },
     {
-      "slug": "21-skybox-and-tonemapping-passes",
-      "title": "Skybox and Tonemapping Passes",
-      "file": "21-skybox-and-tonemapping-passes.md",
-      "section": "Deep Dive",
-      "group": "Layer 2 — Render Passes",
-      "level": "Intermediate"
-    },
-    {
-      "slug": "22-renderer-core-frame-dispatch-gpu-data-fill-and-rasterization-vs-path-tracing",
-      "title": "Renderer Core — Frame Dispatch, GPU Data Fill, and Rasterization vs Path Tracing",
-      "file": "22-renderer-core-frame-dispatch-gpu-data-fill-and-rasterization-vs-path-tracing.md",
+      "slug": "23-application-lifecycle-and-windowing",
+      "title": "Application Lifecycle and Windowing",
+      "file": "23-application-lifecycle-and-windowing.md",
       "section": "Deep Dive",
       "group": "Layer 3 — Application",
       "level": "Intermediate"
     },
     {
-      "slug": "23-scene-loader-gltf-loading-texture-processing-and-bc-compression",
-      "title": "Scene Loader — glTF Loading, Texture Processing, and BC Compression",
-      "file": "23-scene-loader-gltf-loading-texture-processing-and-bc-compression.md",
+      "slug": "24-renderer-orchestration",
+      "title": "Renderer Orchestration",
+      "file": "24-renderer-orchestration.md",
       "section": "Deep Dive",
       "group": "Layer 3 — Application",
       "level": "Intermediate"
     },
     {
-      "slug": "24-debug-ui-imgui-panels-and-runtime-parameter-tuning",
-      "title": "Debug UI — ImGui Panels and Runtime Parameter Tuning",
-      "file": "24-debug-ui-imgui-panels-and-runtime-parameter-tuning.md",
+      "slug": "25-scene-loading-gltf",
+      "title": "Scene Loading (glTF)",
+      "file": "25-scene-loading-gltf.md",
+      "section": "Deep Dive",
+      "group": "Layer 3 — Application",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "26-camera-controller-and-debug-ui",
+      "title": "Camera Controller and Debug UI",
+      "file": "26-camera-controller-and-debug-ui.md",
       "section": "Deep Dive",
       "group": "Layer 3 — Application",
       "level": "Beginner"
     },
     {
-      "slug": "25-glsl-shader-architecture-shared-bindings-brdf-library-and-feature-flags",
-      "title": "GLSL Shader Architecture — Shared Bindings, BRDF Library, and Feature Flags",
-      "file": "25-glsl-shader-architecture-shared-bindings-brdf-library-and-feature-flags.md",
+      "slug": "27-common-shader-library-brdf-bindings",
+      "title": "Common Shader Library (BRDF, Bindings)",
+      "file": "27-common-shader-library-brdf-bindings.md",
       "section": "Deep Dive",
-      "group": "Shader System",
+      "group": "Shader Programming",
       "level": "Intermediate"
     },
     {
-      "slug": "26-path-tracing-shaders-ray-generation-closest-hit-and-miss-shaders",
-      "title": "Path Tracing Shaders — Ray Generation, Closest Hit, and Miss Shaders",
-      "file": "26-path-tracing-shaders-ray-generation-closest-hit-and-miss-shaders.md",
+      "slug": "28-vertex-and-fragment-shaders",
+      "title": "Vertex and Fragment Shaders",
+      "file": "28-vertex-and-fragment-shaders.md",
       "section": "Deep Dive",
-      "group": "Shader System",
+      "group": "Shader Programming",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "29-compute-shaders",
+      "title": "Compute Shaders",
+      "file": "29-compute-shaders.md",
+      "section": "Deep Dive",
+      "group": "Shader Programming",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "30-ray-tracing-shaders",
+      "title": "Ray Tracing Shaders",
+      "file": "30-ray-tracing-shaders.md",
+      "section": "Deep Dive",
+      "group": "Shader Programming",
       "level": "Advanced"
     },
     {
-      "slug": "27-design-principles-tradeoffs-progressive-enhancement-and-sweet-spot-engineering",
-      "title": "Design Principles — Tradeoffs, Progressive Enhancement, and Sweet-Spot Engineering",
-      "file": "27-design-principles-tradeoffs-progressive-enhancement-and-sweet-spot-engineering.md",
+      "slug": "31-milestone-1-static-scene-rendering",
+      "title": "Milestone 1 — Static Scene Rendering",
+      "file": "31-milestone-1-static-scene-rendering.md",
       "section": "Deep Dive",
-      "group": "Roadmap and Design Philosophy",
+      "group": "Milestone Planning",
       "level": "Beginner"
     },
     {
-      "slug": "28-milestone-roadmap-from-static-scene-demo-to-real-time-path-tracing",
-      "title": "Milestone Roadmap — From Static Scene Demo to Real-Time Path Tracing",
-      "file": "28-milestone-roadmap-from-static-scene-demo-to-real-time-path-tracing.md",
+      "slug": "32-milestone-2-quality-enhancement-and-real-time-pt",
+      "title": "Milestone 2 — Quality Enhancement and Real-Time PT",
+      "file": "32-milestone-2-quality-enhancement-and-real-time-pt.md",
       "section": "Deep Dive",
-      "group": "Roadmap and Design Philosophy",
+      "group": "Milestone Planning",
+      "level": "Beginner"
+    },
+    {
+      "slug": "33-milestone-3-dynamic-objects-and-performance",
+      "title": "Milestone 3 — Dynamic Objects and Performance",
+      "file": "33-milestone-3-dynamic-objects-and-performance.md",
+      "section": "Deep Dive",
+      "group": "Milestone Planning",
+      "level": "Beginner"
+    },
+    {
+      "slug": "34-frame-flow-and-render-graph-design",
+      "title": "Frame Flow and Render Graph Design",
+      "file": "34-frame-flow-and-render-graph-design.md",
+      "section": "Deep Dive",
+      "group": "Milestone Planning",
       "level": "Intermediate"
     }
   ]
